@@ -3,6 +3,7 @@ title: 随想 | 有关乱码 | About gibberish
 date: 2021-11-29 10:40:12
 tags:
   - 编程
+categories: 教学
 ---
 
 # 随想 有关乱码

@@ -8,6 +8,7 @@ tags:
   - Transformer
 typora-root-url: ./..
 typora-copy-images-to: ../medias/${filename}
+categories: Paper Reading
 ---
 
 # 论文阅读： COLT5: Faster Long-Range Transformers with Conditional Computation

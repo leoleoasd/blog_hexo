@@ -3,6 +3,7 @@ title: Linux 身份认证系统 -- 从哪儿学起？
 tags:
 	- OS 
     - Linux
+categories: Records
 ---
 
 ## 前言 

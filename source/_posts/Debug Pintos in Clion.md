@@ -4,6 +4,7 @@ date: 2020-11-08 18:40:24
 tags:
 	- OS
 	- Pintos
+categories: Records
 ---
 
 注：流程支持M1的mac、Intel的Mac以及Ubuntu 20.04。

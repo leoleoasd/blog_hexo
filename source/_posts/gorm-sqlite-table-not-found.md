@@ -5,6 +5,7 @@ tags:
   - Go
   - Gorm
   - 数据库
+categories: Records
 ---
 **TL;DR:** `:memory:` 会 **为每个链接打开一个新的数据库**. 
 使用 `file::memory:?cache=shared` 也可能碰到问题, 配置 `MaxOpenConnection` 为 1 即可. (`db.DB().SetMaxOpenConns(1)`)

@@ -5,6 +5,7 @@ tags:
     - Golang 
     - 折腾记录 
     - 踩坑记录
+categories: Records
 ---
 # Go 语言中让某个协程无限堵塞的几种方式.
 

@@ -2,6 +2,7 @@
 title: C++与C的区别
 date: 2019-11-09 19:17:26
 tags: 公众号同步推送
+categories: 教学
 ---
 # CPP 与 C
 
