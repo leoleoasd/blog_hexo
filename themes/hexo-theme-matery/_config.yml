@@ -185,7 +185,7 @@ clicklove:
 # profile in about page, including avatars, career, and personal introductions.
 # 在”关于”页面中配置个人信息，包括头像、职业和个人介绍.
 profile:
-  avatar: /medias/leo@8x.jpg
+  avatar: /medias/leo@8x.png
   career: Student
   introduction: 一个普通人.
 
