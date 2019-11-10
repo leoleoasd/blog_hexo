@@ -25,3 +25,5 @@ script_filename = /data/www/whmcs//admin/login.php
 [0x00007ffdbaff9320] ???() /data/www/whmcs/loghandler.php:44
 ```
 占据主要时间的前三个函数都是composer的函数, 貌似没有任何解决方案. 在Google一番之后, 发现这里的慢主要在于 OS X 下的 Docker 磁盘性能过低, 导致读取php文件速度过慢, 时间变长. 测试了各种解决方案之后, [docker-sync](//docker-sync.io) 解决了这个问题, 将整个网页的加载时间由5s缩短为300ms.
+
+更新: docker-sync有各种玄学bug, 还是虚拟机为妙.
