@@ -96,7 +96,7 @@ Plugins:
 sitemap:
     path: sitemap.xml
 ## Themes: https://hexo.io/themes/
-theme: hexo-theme-matery
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
