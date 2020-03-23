@@ -200,12 +200,16 @@ social_icons:
 # Blog rolls
 links_settings:
   icon: link
-  title: Links
+  title: 友情链接
   # Available values: block | inline
   layout: block
 
 links:
   #Title: http://yoursite.com
+  RalXYZ: https://blog.ralxyz.xyz
+  杰克部落: https://www.renjikai.com
+  Vigorous Pro: //www.wevg.org
+  
 
 # Table of Contents in the Sidebar
 # Front-matter variable (unsupport wrap expand_all).
