@@ -1,7 +1,11 @@
 ---
 title: Raw String 的巨坑
 date: 2020-02-27 19:47:02
-tags: Python string 编译原理 采坑记录
+tags: 
+    - Python 
+    - string 
+    - 编译原理 
+    - 踩坑记录
 ---
 # Raw String 的巨坑
 

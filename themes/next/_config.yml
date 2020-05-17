@@ -94,7 +94,7 @@ footer:
 # CC licenses are available in 39 languages, you can find the specific and correct abbreviation you need on https://creativecommons.org
 creative_commons:
   license: by-nc-sa
-  sidebar: false
+  sidebar: true
   post: true
   language:
 
@@ -167,7 +167,7 @@ sidebar:
 # Sidebar Avatar
 avatar:
   # Replace the default image and set the url here.
-  url: #/images/avatar.gif
+  url: /medias/leo@8x.png
   # If true, the avatar will be dispalyed in circle.
   rounded: false
   # If true, the avatar will be rotated with the cursor.
@@ -206,9 +206,9 @@ links_settings:
 
 links:
   #Title: http://yoursite.com
-  RalXYZ: https://blog.ralxyz.xyz
   杰克部落: https://www.renjikai.com
-  Vigorous Pro: //www.wevg.org
+  Vigorous Pro: https://www.wevg.org
+  Piggy: https://blog.piggy.moe
   
 
 # Table of Contents in the Sidebar
