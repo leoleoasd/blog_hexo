@@ -167,7 +167,7 @@
     {#################}
     {### POST BODY ###}
     {#################}
-    <div class="post-body{%- if post.direction and post.direction.toLowerCase() === 'rtl' %} rtl{%- endif %}" itemprop="articleBody">
+    <div class="post-body{%- if post.direction and post.direction.toLowerCase() === 'rtl' %} rtl{%- endif %} heti" itemprop="articleBody">
 
       {# Gallery support #}
       {%- if post.photos and post.photos.length %}

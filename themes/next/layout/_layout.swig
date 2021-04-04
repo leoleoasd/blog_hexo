@@ -7,6 +7,8 @@
   <title>{% block title %}{% endblock %}</title>
   {{ partial('_third-party/analytics/index.swig', {}, {cache: theme.cache.enable}) }}
   {{ partial('_scripts/noscript.swig', {}, {cache: theme.cache.enable}) }}
+  <link rel="stylesheet" href="//unpkg.com/heti/umd/heti.min.css">
+  <script src="//unpkg.com/heti/umd/heti-addon.min.js"></script>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -50,6 +52,11 @@
   {%- endif %}
   {% include '_third-party/math/index.swig' %}
   {% include '_third-party/quicklink.swig' %}
+
+  <script>
+    const heti = new Heti('.heti');
+    heti.autoSpacing(); // 自动进行中西文混排美化和标点挤压
+  </script>
 
   {{- next_inject('bodyEnd') }}
   {%- if theme.pjax %}
