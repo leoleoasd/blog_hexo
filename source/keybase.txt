@@ -1,0 +1,72 @@
+==================================================================
+https://keybase.io/leoleoasd
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://leoleoasd.me
+  * I am leoleoasd (https://keybase.io/leoleoasd) on keybase.
+  * I have a public key with fingerprint E138 B5E9 6541 EFF7 DCD4  5FC2 69F7 C86A 3D67 3AEA
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0101ef1fe312a349a1c803ae7a3c75bd1aceecf3ab88959be7f53d89e2f83e2f84170a",
+      "fingerprint": "e138b5e96541eff7dcd45fc269f7c86a3d673aea",
+      "host": "keybase.io",
+      "key_id": "69f7c86a3d673aea",
+      "kid": "0101ef1fe312a349a1c803ae7a3c75bd1aceecf3ab88959be7f53d89e2f83e2f84170a",
+      "uid": "45b405a8531958a78dfd3dd71d05bd19",
+      "username": "leoleoasd"
+    },
+    "service": {
+      "hostname": "leoleoasd.me",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1614440468,
+  "expire_in": 157680000,
+  "prev": "64df829e0e5425e2ead283ebba3d13e6b8874aacb819ae244d46c49f8be31bb4",
+  "seqno": 5,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+
+owJ4nK1Sf0xVVRznqUQ8hSj1IYUubpq5kO5999x7z329rSbIYApUawtIBvfHubwr
+9N7j3ccPQxQEMVQK/EH1moAskKXPCeHSZtYkNjGXIDF1Q02BCJKEBwKmYuey/Kf1
+Z2dn5+z7PZ/P5/v9fnaqgub7GQ3778clnn806Db8NCz6ZVhsYYWE6JC3EJZCIgvN
+XShbRpo7PUuVCQtBUiSFFEpBNGUWaMALlARJWkCcQEscI8qUICEkKbQgQsgzvIg4
+haFlyCOzAmn9ABRHCkQkoaj2TORyulS7G8siioYig3iWAVhe4WRJBowimVle4STI
+CrTMcriKTrQ5NJ2BmxMFDUWpDpzDQfpce/+B/5/7zp2TA4wISEaADE3xDBQ4KCsy
+LcscJZO6GK8DNeSyCx8gjM5GDrwFTSaKIgmczlMlpDurj/JvSBQOIwmny+F2SI5s
+/GJzu52aRWe6tzh1aD4S0/8RSRdVu4yNxIw85NJUh52wUBgpuVVdlWIpAAAJWBhJ
+oAKn6kLpqo5gOBaSeOl1UJ5uG5AVaE7hEYkYYGaQGQmyGc8tithJikYsdoUDgiCJ
+kOIFZAZABqwEeAWK2FBRBIQ+V47dQVgY3KeQiTU1NdMuuHNdiCgyVsyjF/gZjH7L
+TRELYru6m0o7rn3cqVaTTz6f/zz95/kZA0OeZKzdzzx6/tT28IoVMTmwalddGpFx
+JH51U1fWkfNvtN6+WDQU2C0YKiuLA8jt7ddeCL/uDbphyt915foO/7G6y4Tvz3xP
+lRWAtMBN8kTp1vjkZedGtLqHtce+9WnfHZ6JaAkPKcgc7H2nTZ0NcpmD68M7e+om
+hyJr1hLOF5XGwfFzK56tfCn+xFR9ylS54/joh7l7EwoDik01Kw99FBG7+HXFXjLq
+PbH84lHXJugpe5i97BMizb/NZ7902fryVGLIZ21/TLMhw31dhUpD30TMUu7C47iN
+Y6kJhuFFtbX3XAH01YaY0IaDaTMXeg6Kb+WXnz25UtgY/Gr0iMnTRDQ9+NV/1fRr
+tps3egrD9jS3FiSa+oMPx6xrugmjIdGfmCTFHrXVTE9MvhdA3vEt/v1Y/W+zn4aZ
+K0InG7zF2Q/u8BvetLxbFqqMrBkrfQ6YcuqWJC05A7q02JyvjlePk5U/7yvI38yv
+qfbcMm47YK29srSvvXzhPvbtIvpxRG/jyVO3f/kxrqT5i86nNxsTSlria+Y/pTR7
+4fr4jsbSmQ7+7ukNNV9+HUzvvXc3eVX04FrbD38NMV2f5x1Yl3Jof/8rozuSqlNn
+J9d/74nr7Zg6nZGwdSDtVtTZkvbU6EU7w6+qsT3WKW+H17qwKmzbuK9xD4wxDNz3
+Jge17M5oXw0vfRPX9r5nZ5mp1X+A951R/gZ21tUG
+=UggY
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/leoleoasd
+
+==================================================================
