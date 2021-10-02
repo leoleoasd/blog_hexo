@@ -116,9 +116,7 @@ SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior a.cpp:14:9 in
 3. 在对象的生命周期结束后访问对象
 4. 有返回类型的函数没有从return结束
 
-但是，我们也仅仅知道这些行为是“错误”的，并不会知道这些行为为什么错误，会造成哪些后果。这些行为在c语言标准里有一个名字：未定义行为（undefined behavior）。
-
-名字很容易让很混淆：未定义行为**不是**标准里没有给出定义的行为（标准里没有给出定义的行为是未指定行为，“unspecified hebavior”），相反，标准中明确规定了哪些行为是未定义行为，如：
+但是，我们也仅仅知道这些行为是“错误”的，并不会知道这些行为为什么错误，会造成哪些后果。这些行为在c++语言标准里有一个名字：未定义行为（undefined behavior）。如：
 
 > 控制流出有返回值的函数（除了 main）的结尾而不经过 return 语句是未定义行为。
 
@@ -191,7 +189,7 @@ template<typename T> bool ArrayList<T>::append(T const& value) {
 
 从右侧的汇编可以看到，`f1`label下面的代码就是`f2`函数，这个函数会格式化你的硬盘（在这个例子并没有真的格式化，注释掉了。）学过汇编的同学可能会发现，由于`f1`内没有任何代码，所以调用`f1`会执行你本来不想执行的`f2`函数。BOOM！你的硬盘被格式化了。
 
-在[llvm的issge tracker中](https://bugs.llvm.org/show_bug.cgi?id=49599)有关这个 “bug”的讨论还在进行中。一部分人认为应该“修复”：
+在[llvm的issue tracker中](https://bugs.llvm.org/show_bug.cgi?id=49599)有关这个 “bug”的讨论还在进行中。一部分人认为应该“修复”：
 
 > This means UB is a potential safety/security problem, and we really should do something about it.
 
@@ -210,7 +208,7 @@ template<typename T> bool ArrayList<T>::append(T const& value) {
 > example.cpp:4:29: runtime error: signed integer overflow: 2147483647 + 1 cannot be represented in type 'int'
 > SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior example.cpp:4:29 in 
 
-大意是已经有足够强大的未定义行为检测器了（又一个体现clang比msvc/gcc之流强大的点），为了方便debug来改这个UB的行为不值得。
+大意是已经有足够强大的未定义行为检测器了，为了方便debug来改这个UB的行为不值得。
 
 总之，**不要写未定义行为**，以及**当你以为编译器错了，你错了。**~~我的OJ同理，因为就是帮你调用编译器来编译代码而已......~~
 
