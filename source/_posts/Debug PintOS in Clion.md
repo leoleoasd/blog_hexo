@@ -8,69 +8,38 @@ tags:
 	- PintOS
 ---
 
-1. MacOS：`brew install qemu i386-elf-gcc`
+注：流程支持M1的mac、Intel的Mac以及Ubuntu。在两种Mac上进行过测试，**没有在Ubuntu**上测试过，不过大体应该差不多。
+
+1. MacOS：`brew install qemu x86_64-elf-gcc x86_64-elf-binutils`
 
     Ubuntu: `apt install qemu gcc`
 
-2. 用**最新的代码**： `git clone git://pintos-os.org/pintos-anon`
+2. **最新的代码**在： `git clone git://pintos-os.org/pintos-anon`，但是建议使用我的修改版本： `git clone https://github.com/leoleoasd/pintos_configuration.git`。
 
-    或者下载我的修改版本： `git clone https://github.com/leoleoasd/pintos_configuration.git`，并跳过第 4，5 ，10步。
-
-3. ```bash
+3. 修改`~/.bashrc`（如果`echo $0`输出了`-bash`）或者`~/.zshrc`（如果`echo $0`输出了`-zsh`），增加以下内容到文件末尾：
+    ```bash
     export GDBMACROS=$PINTOSHOME/src/misc/gdb-marcos
     export PATH=$PATH:$PINTOSHOME/src/utils
     ```
 
-4. 修改 `src/Make.config`, 把`` ifneq (0, $(shell expr `uname -m` : '$(X86)')) `` 的 if 块替换为以下内容：
+4. `cd src/utils && make`
 
-    ```bash
-    ifeq (0, $(shell expr `uname` : 'Darwin'))
-      ifneq (0, $(shell expr `uname -m` : '$(X86)'))
-        CC = gcc
-        LD = ld
-        OBJCOPY = objcopy
-      else
-        ifneq (0, $(shell expr `uname -m` : '$(X86_64)'))
-          CC = gcc -m32
-          LD = ld -melf_i386
-          OBJCOPY = objcopy
-        else
-          CC = i386-elf-gcc
-          LD = i386-elf-ld
-          OBJCOPY = i386-elf-objcopy
-        endif
-      endif
-    else
-      CC = x86_64-elf-gcc -m32
-      LD = x86_64-elf-ld -m elf_i386
-      OBJCOPY = x86_64-elf-objcopy
-    endif
-    ```
+5. `cd src/threads && make && cd build && pintos --qemu --`
 
-5. 按照[这里](http://courses.mpi-sws.org/os-ss13/assignments/pintos/pintos_12.html)： 
-
-    > comment out `#include <stropts.h>` in both `squish-pty.c` and `squish-unix.c`, and comment out lines 288-293 in `squish-pty.c`.
-
-6. `cd src/utils && make`
-
-7. `cd src/threads && make && cd build && pintos --qemu --`
-
-8. 在`src/threads`新建一个 bash 脚本，写入以下内容：
+6.  在`src/threads`新建一个 bash 脚本，写入以下内容：
 
     ```bash
     #!/usr/bin/env bash
     make
     cd build || exit
-    killall qemu-system-i386
+    killall qemu-system-i386 # 杀掉上一次打开的QEMU。Clion不能在停止Debug的时候关闭QEMU。
     
-    CMD="run alarm-signle"
+    CMD="run alarm-signle" # 你要运行的指令。
     nohup bash -c "DISPLAY=window ../../utils/pintos --qemu --gdb -- $CMD > pintos.log" &
     echo "Done!"
     ```
 
-9. 在项目根目录（`src`外面）新建一个`CMakeLists.txt`。**用于使用 clion 提供的代码提示功能， 不能用于编译代码。** 内容从 [这里](https://github.com/leoleoasd/pintos/blob/master/CMakeLists.txt) 复制。
-
-10. 用 clion 打开项目。**如果之前打开过项目，删除`.idea`文件夹后再打开**。点击右上角的 `Add configurations`, 选择 `GDB Remote Debug`, 填入以下信息：
+7.  用 clion 打开项目。**如果之前打开过项目，删除`.idea`文件夹后再打开**。点击右上角的 `Add configurations`, 选择 `GDB Remote Debug`, 填入以下信息：
 
     ’target remote‘ args:  tcp:localhost:1234
 
@@ -84,7 +53,7 @@ tags:
 
     Before launch: 添加一个`Run external tool`, 选择上面新建的 bash 脚本
 
-11. `Cmd+D`即可调试。
+8.  `Cmd+D` or `Ctrl+D`即可调试。
 
 ​	
 
