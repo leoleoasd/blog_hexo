@@ -1,26 +1,27 @@
 ---
-title: PintOS 从编译到 Kernel Panic：在 CLion 里愉快的 Debug
+title: Pintos 从编译到 Kernel Panic：在 CLion 里愉快的 Debug
 date: 2020-11-08 18:40:24
 tags:
-	- MacOS
 	- 环境配置
 	- 操作系统
-	- PintOS
+	- Pintos
 ---
 
-注：流程支持M1的mac、Intel的Mac以及Ubuntu。在两种Mac上进行过测试，**没有在Ubuntu**上测试过，不过大体应该差不多。
+注：流程支持M1的mac、Intel的Mac以及Ubuntu 20.04。
 
 1. MacOS：`brew install qemu x86_64-elf-gcc x86_64-elf-binutils`
 
-    Ubuntu: `apt install qemu gcc`
+    Ubuntu: `apt install qemu-system-i386 gcc`
 
 2. **最新的代码**在： `git clone git://pintos-os.org/pintos-anon`，但是建议使用我的修改版本： `git clone https://github.com/leoleoasd/pintos_configuration.git`。
 
 3. 修改`~/.bashrc`（如果`echo $0`输出了`-bash`）或者`~/.zshrc`（如果`echo $0`输出了`-zsh`），增加以下内容到文件末尾：
     ```bash
+    export PINTOSHOME=<你的Pintos路径>
     export GDBMACROS=$PINTOSHOME/src/misc/gdb-marcos
     export PATH=$PATH:$PINTOSHOME/src/utils
     ```
+    然后执行：`source ~/.bashrc` 或者 `source ~/.zshrc`
 
 4. `cd src/utils && make`
 

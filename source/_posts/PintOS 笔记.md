@@ -1,10 +1,10 @@
 ---
-title: PintOS 笔记
+title: Pintos 笔记
 date: 2020-11-05 18:40:24
 tags:
 	- OS 
 	- 操作系统
-	- PintOS
+	- Pintos
 ---
 
 # 安装
