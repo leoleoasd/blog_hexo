@@ -213,6 +213,7 @@ links:
   苏卡卡的有底洞: https://blog.skk.moe/
   Balthild’s Blog: https://qaq.cat/
   小熊の小站: https://blog.hailres.xyz/
+  Hao's Blog: https://guangchen811.github.io/
   
 
 # Table of Contents in the Sidebar
@@ -694,7 +695,7 @@ add_this_id:
 
 # Google Analytics
 google_analytics:
-  tracking_id: UA-141894777-1
+  tracking_id: G-64MFK4V41L
   # By default, NexT will load an external gtag.js script on your site.
   # If you only need the pageview feature, set the following option to true to get a better performance.
   only_pageview: false
