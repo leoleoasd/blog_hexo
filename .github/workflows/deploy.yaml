@@ -29,8 +29,8 @@ jobs:
     - name: Deploy
       id: deploy
       run: |
-        echo "${{ secrets.DEPLOY_KEY }}" > /root/.ssh/id_rsa
-        chmod 600 /root/.ssh/id_rsa
+        echo "${{ secrets.DEPLOY_KEY }}" > /home/runner/.ssh/id_rsa
+        chmod 600 /home/runner/.ssh/id_rsa
         ./node_modules/.bin/hexo g -d -m "${{ github.event.head_commit.message }}"
       # with:
       #   deploy_key: 
