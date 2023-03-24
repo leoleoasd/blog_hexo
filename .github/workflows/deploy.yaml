@@ -35,10 +35,3 @@ jobs:
         git config --global user.email "blog_deployer@yuxuan.lu"
         git config --global user.name "Yuxuan Lu"
         ./node_modules/.bin/hexo g -d -m "${{ github.event.head_commit.message }}"
-      # with:
-      #   deploy_key: 
-      #   commit_msg: ${{ github.event.head_commit.message }}
-    # Use the output from the `deploy` step(use for test action)
-    - name: Get the output
-      run: |
-        echo "${{ steps.deploy.outputs.notify }}"
