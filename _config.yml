@@ -61,13 +61,6 @@ highlight:
     - example
   wrap: true
   hljs: false
-  
-prismjs:
-  enable: false
-  preprocess: true
-  line_number: true
-  line_threshold: 0
-  tab_replace: ''
 
 search:
   path: search.xml
