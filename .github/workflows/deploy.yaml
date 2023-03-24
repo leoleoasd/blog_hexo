@@ -22,9 +22,7 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-yarn-
     - name: Install Dependencies
-      if: steps.cache.outputs.cache-hit != 'true'
       run: yarn install --frozen-lockfile --dev
-    
     # Deploy hexo blog website.
     - name: Deploy
       id: deploy
