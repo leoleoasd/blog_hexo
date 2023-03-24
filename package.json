@@ -26,5 +26,8 @@
     "hexo-theme-next": "^8.15.0",
     "hexo-word-counter": "^0.1.0",
     "markdown-it-katex": "^2.0.3"
+  },
+  "devDependencies": {
+    "hexo-util": "^3.0.1"
   }
 }
