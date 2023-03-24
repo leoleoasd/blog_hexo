@@ -32,6 +32,8 @@ jobs:
         mkdir /home/runner/.ssh
         echo "${{ secrets.DEPLOY_KEY }}" > /home/runner/.ssh/id_rsa
         chmod 600 /home/runner/.ssh/id_rsa
+        git config --global user.email "blog_deployer@yuxuan.lu"
+        git config --global user.name "Yuxuan Lu"
         ./node_modules/.bin/hexo g -d -m "${{ github.event.head_commit.message }}"
       # with:
       #   deploy_key: 
