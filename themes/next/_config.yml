@@ -214,6 +214,8 @@ links:
   Balthild’s Blog: https://qaq.cat/
   小熊の小站: https://blog.hailres.xyz/
   Hao's Blog: https://guangchen811.github.io/
+  小熊の小站: https://blog.bearxiong.xyz/
+  Catoverflow: https://c-j.dev/
   
 
 # Table of Contents in the Sidebar
@@ -531,7 +533,7 @@ math:
 
   # hexo-renderer-markdown-it-plus (or hexo-renderer-markdown-it with markdown-it-katex plugin) required for full Katex support.
   katex:
-    enable: false
+    enable: true
     # See: https://github.com/KaTeX/KaTeX/tree/master/contrib/copy-tex
     copy_tex: false
 

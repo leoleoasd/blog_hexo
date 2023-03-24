@@ -11,6 +11,18 @@ author: Leo
 language: zh-CN
 timezone: Asia/Shanghai
 
+markdown:
+  render:
+    html: true
+    xhtmlOut: false
+    breaks: true
+    linkify: true
+    typographer: true
+    quotes: '“”‘’'
+  plugins:
+    - markdown-it-katex
+    - markdown-it-footnote
+
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://leoleoasd.me
