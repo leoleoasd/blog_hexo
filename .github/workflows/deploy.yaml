@@ -33,6 +33,7 @@ jobs:
         git config --global user.email "blog_deployer@yuxuan.lu"
         git config --global user.name "Yuxuan Lu"
         # Initialize target with currently deployed files
+        rm -rf .deploy_git
         git clone --depth 1 --branch=master https://github.com/leoleoasd/blog.git .deploy_git
         cd .deploy_git
         # Remove all files before they get copied from ../public/
