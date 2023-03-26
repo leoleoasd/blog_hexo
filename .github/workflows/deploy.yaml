@@ -32,4 +32,11 @@ jobs:
         chmod 600 /home/runner/.ssh/id_rsa
         git config --global user.email "blog_deployer@yuxuan.lu"
         git config --global user.name "Yuxuan Lu"
+        # Initialize target with currently deployed files
+        git clone --depth 1 --branch=master https://github.com/leoleoasd/blog.git .deploy_git
+        cd .deploy_git
+        # Remove all files before they get copied from ../public/
+        # so git can track files that were removed in the last commit
+        find . -path ./.git -prune -o -exec rm -rf {} \; 2> /dev/null
+        cd ../
         ./node_modules/.bin/hexo g -d -m "${{ github.event.head_commit.message }}"
