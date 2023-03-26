@@ -8,9 +8,14 @@ jobs:
     name: A job to deploy blog.
     steps:
     - name: Checkout
-      uses: actions/checkout@v1
+      uses: actions/checkout@v3
       with:
         submodules: true # Checkout private submodules(themes or something else).
+    - uses: actions/checkout@v3
+      with:
+        repository: leoleoasd/blog
+        path: .deploy_git
+        ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
     - name: Get yarn cache directory path
       id: yarn-cache-dir-path
       run: echo "dir=$(yarn cache dir)" >> $GITHUB_OUTPUT
@@ -33,9 +38,8 @@ jobs:
         git config --global user.email "blog_deployer@yuxuan.lu"
         git config --global user.name "Yuxuan Lu"
         # Initialize target with currently deployed files
-        rm -rf .deploy_git
-        git clone --depth 1 --branch=master https://github.com/leoleoasd/blog.git .deploy_git
         cd .deploy_git
+        ls
         # Remove all files before they get copied from ../public/
         # so git can track files that were removed in the last commit
         find . -path ./.git -prune -o -exec rm -rf {} \; 2> /dev/null
