@@ -117,3 +117,5 @@ deploy:
   repo: git@github.com:leoleoasd/blog.git
   branch: master
   message: 
+
+updated_option: date
