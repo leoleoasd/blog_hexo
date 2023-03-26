@@ -42,6 +42,7 @@ jobs:
         ls
         # Remove all files before they get copied from ../public/
         # so git can track files that were removed in the last commit
-        find . -path ./.git -prune -o -exec rm -rf {} \;
+        shopt -s extglob
+        rm -r -- !(.git)
         cd ../
         ./node_modules/.bin/hexo g -d -m "${{ github.event.head_commit.message }}"
