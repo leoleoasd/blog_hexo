@@ -39,7 +39,6 @@ jobs:
         git config --global user.name "Yuxuan Lu"
         # Initialize target with currently deployed files
         cd .deploy_git
-        ls
         # Remove all files before they get copied from ../public/
         # so git can track files that were removed in the last commit
         shopt -s extglob
