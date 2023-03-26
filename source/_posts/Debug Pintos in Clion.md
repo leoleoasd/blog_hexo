@@ -2,8 +2,7 @@
 title: Pintos 从编译到 Kernel Panic：在 CLion 里愉快的 Debug
 date: 2020-11-08 18:40:24
 tags:
-	- 环境配置
-	- 操作系统
+	- OS
 	- Pintos
 ---
 
