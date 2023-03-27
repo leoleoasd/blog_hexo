@@ -29,7 +29,7 @@ categories: Paper Reading
 
 作者的观点认为，应该把有限的计算力分配给更重要的token。作者简单地把当前层的表示乘以一个投映矩阵后得到路由分数并选择一个固定比例 token来输入到heavy模块来减少计算量。特别的，作者对FNN、Attention Q和Attention K使用了3个不同的router。
 
-![image-20230326154212490](/source/medias/Paper-reading-COLT5-Faster-Long-Range-Transformers-with-Conditional-Computation/image-20230326154212490.png)
+![image-20230326154212490](/medias/Paper-reading-COLT5-Faster-Long-Range-Transformers-with-Conditional-Computation/image-20230326154212490.png)
 
 最终把flops的常数项（尤其是 $n^2$ 的常数项）优化了非常多。
 
