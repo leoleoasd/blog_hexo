@@ -12,7 +12,6 @@ hexo.extend.filter.register('before_post_render', data => {
   if (gitDate < originDate) {
     data.date = gitDate;
   }
-
   const originUpdated = data.updated;
   const gitUpdated = getUpdated(data);
   if (gitUpdated >= originUpdated.clone().endOf('day')) {
@@ -35,7 +34,7 @@ function getDate(data) {
 function getUpdated(data) {
   const filePath = getFilePath(data);
   // const updated = execSync(`git log --follow -1 --format="%ad" -- "${filePath}"`).toString().trim();
-  const updated = execSync(`git log --follow -1 --format="%ad" -- "${filePath}"  | sort -r | tail -1`).toString().trim();
+  const updated = execSync(`git log --follow --format="%ad" -- "${filePath}"  | sort -r | head -1`).toString().trim();
   if (updated === '') {
     return moment();
   }
