@@ -20,7 +20,6 @@ markdown:
     typographer: true
     quotes: '“”‘’'
   plugins:
-    - markdown-it-katex
     - markdown-it-footnote
 
 # URL

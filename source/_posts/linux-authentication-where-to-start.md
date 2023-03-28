@@ -1,8 +1,8 @@
 ---
 title: Linux 身份认证系统 -- 从哪儿学起？
 tags:
-	- OS 
-    - Linux
+  - OS 
+  - Linux
 categories: Records
 date: 2023-03-26 11:37:49
 ---
