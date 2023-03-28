@@ -4,18 +4,23 @@ date: 2023-03-21 14:16:07
 tags:
   - 论文阅读
   - NLP
+typora-root-url: ..
 categories: Paper Reading
 ---
 
 一直觉得应该找一个形式把读过的论文以除了组会分享报告之外的形式记录下来。最近看到同学的论文阅读分享，终于决定也开始写blog。
 
-今天看的这篇是 Self-Instruct, 是最近很火的 instruct tuning（给LLM增加 follow instruct 的能力）方法。之前InstructGPT等方法都是需要人工标注的instruct数据（在SFT阶段），这篇工作提出，既然LLM的能力已经足够强，只需要构造Prompt，从LLM中挖掘instruct信息，从而来tune自己。感觉是要投今年的ACL。他们声称用GPT3达到了类似 text-davinci-001 （仅SFT的InstructGPT）的效果，比用 SuperNaturalInstructions 数据集训练的效果类似。22年12月的文章，这篇文章发表的时候chatgpt刚发布不久，所以只对比了 InstructGPT？（好像跟ChatGPT也没法比）。
+今天看的这篇是 [Self-Instruct](https://arxiv.org/abs/2212.10560) , 是最近很火的 instruct tuning（给LLM增加 follow instruct 的能力）方法。之前InstructGPT等方法都是需要人工标注的instruct数据（在SFT阶段），这篇工作提出，既然LLM的能力已经足够强，只需要构造Prompt，从LLM中挖掘instruct信息，从而来tune自己。
+
+本质上，作者证明了『可以从 few-shot 能力很强的LLM来bootstrap出一套 SFT 数据集，从而得到 zero-shot 或者说 Instruct-tuned LLM』。
+
+作者来自华盛顿大学，感觉是要投今年的ACL。他们声称用GPT3达到了类似 text-davinci-001 （仅SFT的InstructGPT）的效果，比用 SuperNaturalInstructions 数据集训练的效果类似。这篇文章发布于22年12月，当时chatgpt刚发布不久，所以只对比了 InstructGPT？（好像跟ChatGPT也没法比）。
 
 Stanford 也用这个方法，用 text davinci 003 造了个数据集后基于 LLaMa 训练了 Alpaca 模型，在7B这样一个参数量下达到了相当惊艳的效果。这也是证明 instruct tuning 不需要花很多钱就能做到的一个证据？Alpaca开源了他们生成的52k个instruction，这可能是 llm 的 stable diffusion moment 的开端？
 
 ## Introduction
 
-作者先讲了最近大家都在做 instruction tuning 的工作，说现在的方法都需要人工构建instruct数据集。于是，他们提出self-instruct方法，视图让LLM自我构建一个 instruct 的数据集，来做到自己训练自己：从一个很短的（175个）人手写的数据集来bootstrap，主要有一下不周：
+作者先讲了最近大家都在做 instruction tuning 的工作，说现在的方法都需要人工构建instruct数据集。于是，他们提出self-instruct方法，视图让LLM自我构建一个 instruct 的数据集，来做到自己训练自己：从一个很短的（175个）人手写的数据集来bootstrap，主要有一下步骤：
 1. 要求模型生成新任务的instruction
    1. 利用现有的任务描述，让模型生成新的任务和新的指令。通常，模型会定义一些新的任务出来
 2. 生成 input-output pair
@@ -66,7 +71,7 @@ Task9:
 同时，在一套新的instruct set 上进行了人工评分：
 ![](/medias/selfinstruct-result.png)
 
-效果和 InstructGPT_001 类似。。
+效果和 InstructGPT_001 类似。
 
 ## 结论
 
