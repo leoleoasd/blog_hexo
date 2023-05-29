@@ -4,7 +4,7 @@
 
 # Site
 title: Leo's blog
-subtitle: Leo's cottage.
+subtitle: 建议麦当劳
 description: 建议麦当劳
 keywords: c++ python machine_learning nlp
 author: Leo
@@ -18,7 +18,7 @@ markdown:
     breaks: true
     linkify: true
     typographer: true
-    quotes: '“”‘’'
+    quotes: "“”‘’"
   plugins:
     - markdown-it-footnote
 
@@ -55,7 +55,7 @@ highlight:
   auto_detect: false
   line_number: true
   line_threshold: 0
-  tab_replace: ''
+  tab_replace: ""
   exclude_languages:
     - example
   wrap: true
@@ -67,8 +67,7 @@ search:
 
 permalink_pinyin:
   enable: true
-  separator: '-' # default: '-'
-
+  separator: "-" # default: '-'
 
 symbols_count_time:
   symbols: true
@@ -79,10 +78,10 @@ symbols_count_time:
 # per_page: Posts displayed per page. (0 = disable pagination)
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
-  path: ''
+  path: ""
   per_page: 6
   order_by: -date
-  
+
 # Category & Tag
 default_category: uncategorized
 category_map:
@@ -103,9 +102,9 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 Plugins:
-- hexo-generator-sitemap
+  - hexo-generator-sitemap
 sitemap:
-    path: sitemap.xml
+  path: sitemap.xml
 ## Themes: https://hexo.io/themes/
 theme: next
 
@@ -115,6 +114,6 @@ deploy:
   type: git
   repo: git@github.com:leoleoasd/blog.git
   branch: master
-  message: 
+  message:
 
 updated_option: date
